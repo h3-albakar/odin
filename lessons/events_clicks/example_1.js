@@ -2,5 +2,10 @@ function alertingHello() {
     return alert("Hello... u");
 }
 
-const div = document.querySelector('button');
-div.addEventListener('click', alertingHello);
+const btn = document.querySelector('button');
+btn.addEventListener('click', alertingHello);
+
+btn.addEventListener('click', function(e) {
+    // e.target.style.backgroundColor = 'red';
+    console.log(e.target);
+    });

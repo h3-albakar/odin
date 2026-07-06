@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- I need to create a div box, with a width and 
+ a height and add to it a background color  -->
+ <!-- then we need to also add an event listener called mouseover on the div so that we can the output the result
+  ahhhhh... output the result needs its own div-->
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #canvas { 
+            background-color: purple;
+            width: 200px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div> PUT YOUR CURSOR ANYWHERE BELOW </div>
+    <div id="canvas"></div>  
+    <div id="log"></div>  
+</body>
+<script>
+    const canvas = document.querySelector("#canvas");
+    let log = document.querySelector("#log");
+
+    canvas.addEventListener("mousemove", function(e) {
+       log.innerText = `X coordinates is ${e.screenX} and the Y is ${e.screenY}
+                        while the X Client is ${e.clientX} and the Y is ${e.clientY}
+       `
+    })
+</script>
+</html>

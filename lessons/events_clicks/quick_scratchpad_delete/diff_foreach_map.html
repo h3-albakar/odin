@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        arr = [1, 2, 3, 4, 5];
+
+    // if I want to double the value of each even number in the arr 
+    arr.forEach(function(value, index) {
+        if (value % 2 === 0) {
+            arr[index] = value * 2
+        }
+    })
+    
+    console.log(arr);
+   </script> 
+</body>
+</html>

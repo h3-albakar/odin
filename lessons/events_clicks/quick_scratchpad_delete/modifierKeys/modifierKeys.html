@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <button>Click me</button> 
+   <script> 
+        let btn = document.querySelector("button");
+        btn.addEventListener('click', function(e) {
+            if (e.shiftKey) return console.log(e.shiftKey);
+        })
+   </script>
+</body>
+</html>
