@@ -7,12 +7,17 @@ btn.addEventListener("click", (event) => {
     let newItem = document.createElement("li");
     // newItem.textContent = input.value;
     let sp = document.createElement("span");
-    let btn = document.createElement("button");
+    let btn1 = document.createElement("button");
 
     sp.textContent = input.value;
     input.value = "";
-    btn.textContent = "Delete";
+    btn1.textContent = "Delete";
     newItem.appendChild(sp);
-    newItem.appendChild(btn);
+    newItem.appendChild(btn1);
     list.appendChild(newItem);
+    btn1.addEventListener("click",function() {
+        alert(`item ${newItem.textContent} removed`)
+        newItem.remove();
+    })
+
 });
