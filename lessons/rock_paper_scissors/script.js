@@ -4,8 +4,8 @@ let computerScore = 0;
 const available_choices = ["Rock", "Paper", "Scissors"];
 const human_wins = [["Rock", "Scissors"], ["Paper","Rock"], ["Scissors", "Paper"]];
 function getComputerChoice() {
-    let index = Math.floor(Math.random() * choice.length);
-    return choice[index];
+    let index = Math.floor(Math.random() * available_choices.length);
+    return available_choices[index];
 } 
 
 function getHumanChoice() {
