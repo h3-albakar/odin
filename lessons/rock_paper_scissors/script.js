@@ -13,19 +13,15 @@ function getHumanChoice() {
     return choice;
 }
 function playRound(humanChoice, computerChoice) {
-    // "rock" beats scissors loses paper
-    // "paper" beats rock loses scissors 
-    // scissors beats paper loses rock 
-    // 
-        if (humanChoice === computerChoice) return "its a tie!";
+
+    if (humanChoice === computerChoice) return "its a tie!";
         for (let item of human_wins){
             if (humanChoice === item[0] && computerChoice === item[1]) {
-        return `human chose ${humanChoice} and computer chose ${computerChoice} human wins`;}}
-    return `human chose ${humanChoice} and computer chose ${computerChoice} computer wins`};
+                humanScore += 1;
+                return `human wins`;}}
+    computerScore += 1;
+    return `computer wins`};
     
-
-
-
 const btn = document.querySelector('#bob');
 
 btn.addEventListener("click", (e) => {
