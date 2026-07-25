@@ -14,11 +14,17 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
-
-    if ((humanChoice === "Rock") && (computerChoice === "Paper")) {
-        return "human wins";}
-    else return "undefinded" 
-    }
+    // "rock" beats scissors loses paper
+    // "paper" beats rock loses scissors 
+    // scissors beats paper loses rock 
+    // 
+    human_wins = [["Rock", "Paper"], ["Paper","Scissors"], ["Scissors", "Paper"]]
+        if (humanChoice === computerChoice) return "its a tie!";
+        for (let i = 0; i < human_wins.length - 1; i++){
+            if (humanChoice === human_wins[i][0] && computerChoice === human_wins[i][1]) {
+        return `human chose ${humanChoice} and computer chose ${computerChoice} human wins`;}
+    else return `human chose ${humanChoice} and computer chose ${computerChoice} computer wins`}};
+    
 
 
 
