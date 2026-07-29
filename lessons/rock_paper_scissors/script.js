@@ -29,22 +29,14 @@ function playRound(humanChoice, computerChoice) {
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
+const result = document.querySelector('#result')
 
-
-rock.addEventListener("click", (e) => {
-    humanSelection = e.target.textContent;
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-})
-
-paper.addEventListener("click", (e) => {
-    humanSelection = e.target.textContent;
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-})
-
-scissors.addEventListener("click", (e) => {
-    humanSelection = e.target.textContent;
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-})
+const buttons = document.querySelectorAll('button');
+buttons.forEach(
+    (button) => {
+        button.addEventListener("click", (e) => {
+            humanSelection = e.target.textContent;
+            computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+        })
+    });
