@@ -28,9 +28,12 @@ function playRound(humanChoice, computerChoice) {
     return;
 };
 function playGame(){
-    buttons.forEach(
-        (button) => {
-            button.addEventListener("click", (e) => {
+    buttons.forEach((button) => {
+        console.log('installing listeners');
+        button.addEventListener("click", (e) => {
+                console.log('click happened');
+                if (computerScore + humanScore === 5) {
+                    return console.log('Cant do more gotta refresh mate');}
                 humanSelection = e.target.textContent;
                 computerSelection = getComputerChoice();
                 playRound(humanSelection, computerSelection);
@@ -38,6 +41,7 @@ function playGame(){
                 round_result.textContent = `Human score is ${humanScore} and Computer score is ${computerScore}`;
                 result.appendChild(round_result);
                 if (computerScore + humanScore === 5) {
+                    console.log('game ending condition reached')
                     let game_winner = ''
                     if (humanScore === computerScore) game_winner = 'Its a tie... damn';
                     else if (humanScore > computerScore) game_winner = 'YOU WIN CONGRATS!!';
@@ -51,6 +55,7 @@ function playGame(){
     return;
     }
 playGame();
+console.log('checking outside of game');
 if (typeof game_winner !== 'undefined' && game_winner !== null) {
     humanScore = 0;
     computerScore = 0;
